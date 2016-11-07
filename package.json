@@ -1,0 +1,13 @@
+{
+  "name": "nefte-gaz-energo-servis",
+  "description": "Wordpress templates for NefteGazEnegroServis site",
+  "author": "Yuriy Kurenkov",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-csscomb": "^3.1.1",
+    "grunt-express": "^1.4.1",
+    "grunt-sass": "^1.2.1",
+    "load-grunt-tasks": "^3.5.2"
+  }
+}
