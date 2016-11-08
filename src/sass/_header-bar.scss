@@ -1,0 +1,8 @@
+.header-bar {
+    // box model
+    padding: 15px 0;
+    // visual
+    background-color: $headerBgColor;
+
+    @include clearfix;
+}

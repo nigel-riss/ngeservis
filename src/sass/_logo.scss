@@ -1,0 +1,12 @@
+.logo {
+    // box model
+    /*display: inline-block;*/
+    float: left;
+    /*vertical-align: top;*/
+    width: 20px;
+
+    &__image {
+        // box model
+        width: 100%;
+    }
+}

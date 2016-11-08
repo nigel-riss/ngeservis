@@ -1,0 +1,21 @@
+.hero {
+    // box model
+    padding-bottom: 20px;
+    @media(min-width: $tablet) {
+        height: 500px;
+        /*padding-bottom: 0;*/
+    }
+    @media(min-width: $desktop) {
+        height: 700px;
+    }
+
+    // visual
+    background-image: url("../img/bg-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @media(min-width: $desktop) {
+        background-attachment: fixed;
+    }
+}

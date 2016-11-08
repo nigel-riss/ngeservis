@@ -1,0 +1,20 @@
+@import "normalize";
+@import "vars";
+@import "mixins";
+
+@import "container";
+@import "hero";
+@import "header-bar";
+@import "logo";
+@import "company-name";
+@import "contacts";
+@import "main-menu";
+@import "activities";
+@import "section";
+
+body {
+    /*font-family: $titleFont;*/
+    // visual
+    background-color: $darkColor;
+    background-image: url("../img/body-bg.png");
+}

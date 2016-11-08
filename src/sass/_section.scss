@@ -1,0 +1,54 @@
+.section {
+    // box model
+    padding-top: 20px;
+    @media(min-width: $tablet) {
+        padding-top: 40px;
+    }
+
+    &__caption {
+        // box model
+        display: inline-block;
+        padding: 10px 35px;
+
+        // typography
+        color: $darkColor;
+        font-family: $copyFont;
+        font-weight: 400;
+        font-size: 30px;
+
+        // visual
+        background-color: $highlightColor;
+    }
+
+    &__text {
+        // typography
+        color: $copyColor;
+        font-family: $copyFont;
+        font-weight: 300;
+        line-height: 1.5;
+    }
+
+    &__list {
+        // box model
+        margin: 0;
+        padding: 0;
+
+        // visual
+        list-style: none;
+    }
+
+    &__item {
+        // box model
+        padding-bottom: 20px;
+
+        // typography
+        color: $copyColor;
+        font-family: $copyFont;
+        font-weight: 300;
+        line-height: 1.5;
+
+        &:before {
+            content: "— ";
+        }
+    }
+}

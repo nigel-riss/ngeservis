@@ -1,0 +1,25 @@
+.company-name {
+    // box model
+    display: block;
+    /*vertical-align: top;*/
+    margin: 0;
+    padding: 0;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+    @media(min-width: $tablet) {
+        float: left;
+        padding-left: 15px;
+        padding-top: 8px;
+    }
+
+    // typography
+    color: #ffffff;
+    font-family: $titleFont;
+    font-size: 18px;
+    text-transform: uppercase;
+    @media(min-width: $tablet) {
+        font-size: 22px;
+    }
+}
