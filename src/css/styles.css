@@ -393,7 +393,7 @@ template {
   background-size: cover; }
   @media (min-width: 768px) {
     .hero {
-      /*height: 500px;*/
+      height: 500px;
       /*padding-bottom: 0;*/ } }
   @media (min-width: 1000px) {
     .hero {
@@ -435,8 +435,7 @@ template {
     .company-name {
       float: left;
       padding-left: 15px;
-      padding-top: 8px;
-      padding-bottom: 0; } }
+      padding-top: 8px; } }
   @media (min-width: 768px) {
     .company-name {
       font-size: 22px; } }
@@ -521,7 +520,7 @@ template {
   /*filter: blur(5px);*/
   /*background-image: url("../img/bg-blur.jpg");
     background-position: -460px -322px;*/ }
-  @media (min-width: 1000px) {
+  @media (min-width: 768px) {
     .activities {
       margin-top: 100px;
       width: 600px; } }
@@ -569,9 +568,6 @@ template {
     line-height: 1.5; }
     .section__item:before {
       content: "— "; }
-
-.main-footer {
-  background-color: #f7ce3e; }
 
 body {
   /*font-family: $titleFont;*/
