@@ -1,4 +1,12 @@
 .main-footer {
+    // box model 
+    padding: 20px 0;
+    color: white;
+
+    // typography
+    font-size: 0;
+
     // visual
     background-color: $highlightColor;
+    background-color: #000000;
 }

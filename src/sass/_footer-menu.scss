@@ -1,0 +1,43 @@
+.footer-menu {
+    /*border: 1px solid red;*/
+    // box model 
+    float: right;
+
+    &__list {
+        // box model
+        /*display: inline-block;*/
+        margin: 0;
+        padding: 0;
+
+        // typography
+        text-align: right;
+
+        // visual
+        list-style: none;
+    }
+
+    &__item {
+        // box model 
+        /*display: inline-block;*/
+    }
+
+    &__link {
+        // box model 
+        display: block;
+        padding: 10px;
+
+        // typography
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 300;
+        text-decoration: none;
+
+        &--active {
+            // typography
+            color: $darkColor;
+
+            // visual
+            background-color: $highlightColor;;
+        }
+    }
+}
