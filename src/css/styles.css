@@ -435,7 +435,8 @@ template {
     .company-name {
       float: left;
       padding-left: 15px;
-      padding-top: 8px; } }
+      padding-top: 8px;
+      padding-bottom: 10px; } }
   @media (min-width: 768px) {
     .company-name {
       font-size: 22px; } }
@@ -444,27 +445,17 @@ template {
   display: block;
   /*vertical-align: top;*/
   text-align: right;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.5; }
+  color: #ffffff; }
   @media (min-width: 768px) {
     .contacts {
       float: right; } }
   .contacts a {
-    position: relative;
     color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
     text-decoration: none;
     text-transform: uppercase; }
-    .contacts a:after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      display: block;
-      width: 100%;
-      height: 1px;
-      background-color: #f7ce3e; }
 
 .main-menu {
   padding-top: 20px;
