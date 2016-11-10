@@ -24,11 +24,28 @@ module.exports = function (grunt) {
             }
         },
 
+        concat_css: {
+            style: {
+                src: ["src/css/wp.css", "src/css/styles.css"],
+                dest: "src/style.css"
+            }
+        },
+
+        copy: {
+            style: {
+                expand: true,
+                flatten: true,
+                // cwd: 'src/',
+                src: ['src/*.php',
+                    'src/style.css'],
+                dest: 'G:/_xampp/htdocs/ngeservis/wp-content/themes/nge/'
+            }
+        },
 
         watch: {
             style: {
                 files: ["src/**/*.*"],
-                tasks: ["csscomb", "sass"],
+                tasks: ["csscomb", "sass", "concat_css", "copy"],
                 options: {
                     spawn: false,
                     livereload: true

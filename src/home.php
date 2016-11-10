@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>НефтеГазЭнергоСервис</title>
+    <title><?php bloginfo('name'); ?></title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 </head>
 
 <body>
@@ -13,7 +13,7 @@
         <div class="header-bar">
             <div class="container">
                 <div class="logo">
-                    <img src="img/logo.png" alt="лого" class="logo__image">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="лого" class="logo__image">
                 </div>
                 <h1 class="company-name">
                     НефтеГазЭнергоСервис
@@ -29,17 +29,17 @@
         <div class="container">
             <nav class="main-menu">
                 <ul class="main-menu__list">
-                    <li class="main-menu__item main-menu__item--active">
-                        <a href="#"><span class="main-menu__link">Главная</span></a>
+                    <li class="main-menu__item">
+                        <a href="" class="main-menu__link  main-menu__link--active">Главная</a>
                     </li>
                     <li class="main-menu__item">
-                        <a href="#"><span class="main-menu__link">Деятельность</span></a>
+                        <a href="" class="main-menu__link">Деятельность</a>
                     </li>
                     <li class="main-menu__item">
-                        <a href="#"><span class="main-menu__link">Спецпредложения</span></a>
+                        <a href="" class="main-menu__link">Спецпредложения</a>
                     </li>
                     <li class="main-menu__item">
-                        <a href="#"><span class="main-menu__link">Контакты</span></a>
+                        <a href="" class="main-menu__link">Контакты</a>
                     </li>
                 </ul>
             </nav>
@@ -107,6 +107,10 @@
                     </ul>
                 </p>
             </section>
+
+            <?php
+                the_content();
+            ?>
         </div>
     </main>
 

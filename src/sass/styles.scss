@@ -19,5 +19,9 @@ body {
     /*font-family: $titleFont;*/
     // visual
     background-color: $darkColor;
-    background-image: url("../img/body-bg.png");
+    background-image: url("img/body-bg.png");
+}
+
+a {
+    text-decoration: none;
 }

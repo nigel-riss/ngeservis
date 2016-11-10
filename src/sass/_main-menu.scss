@@ -19,6 +19,18 @@
         @media(min-width: $tablet) {
             display: inline-block;
         }
+
+        &--active .main-menu__link {
+            // typography
+            color: $darkColor;
+
+            // visual
+            background-color: $highlightColor;
+
+            &:hover:before {
+                display: none;
+            }
+        }
     }
 
     &__link {
@@ -67,18 +79,6 @@
 
             // visual
             opacity: 1;
-        }
-
-        &--active {
-            // typography
-            color: $darkColor;
-
-            // visual
-            background-color: $highlightColor;
-
-            &:hover:before {
-                display: none;
-            }
         }
     }
 }

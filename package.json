@@ -4,6 +4,8 @@
   "author": "Yuriy Kurenkov",
   "version": "0.1.0",
   "devDependencies": {
+    "grunt-concat-css": "^0.3.1",
+    "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-csscomb": "^3.1.1",
     "grunt-express": "^1.4.1",
