@@ -7,6 +7,9 @@
     margin: 0 auto;
     padding: 0 10px;
     max-width: $desktop;
+    @media(min-width: $tablet) {
+        padding: 0 20px;
+    }
 
     @include clearfix;
 }

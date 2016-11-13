@@ -1,4 +1,7 @@
 .main-footer {
+    // positioning
+    position: relative;
+
     // box model 
     padding: 20px 0;
     color: white;
@@ -8,5 +11,23 @@
 
     // visual
     background-color: $highlightColor;
-    background-color: #000000;
+    background-image: url("img/footer-bg.png");
+    /*background-color: #000000;*/
+
+    &:before {
+        content: "";
+
+        // positioning
+        position: absolute;
+        top: -9px;
+
+        // box model
+        display: block;
+        height: 9px;
+        width: 100%;
+
+        // visual
+        /*border: 1px solid red;*/
+        background-image: url("img/footer-border.png");
+    }
 }

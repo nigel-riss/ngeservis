@@ -2,7 +2,7 @@
     // box model
     padding-bottom: 20px;
     @media(min-width: $tablet) {
-        height: 500px;
+        height: 540px;
         /*padding-bottom: 0;*/
     }
     @media(min-width: $desktop) {
@@ -17,5 +17,17 @@
 
     @media(min-width: $desktop) {
         background-attachment: fixed;
+    }
+
+    &--page {
+        // box model
+        @media(min-width: $tablet) {
+            height: 130px;
+        }
+
+        // visual
+        background-position: center bottom;
+        /*background-position: center -170px;*/
+        background-attachment: scroll;
     }
 }

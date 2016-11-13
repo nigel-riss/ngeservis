@@ -1,0 +1,45 @@
+.sidebar {
+    // box model
+    @media(min-width: $desktop) {
+        float: right;
+        /*margin-top: 120px;*/
+        width: 330px;
+    }
+
+    // visual
+    border: 1px solid $highlightColor;
+
+    &__list {
+        // box model
+        margin: 0;
+        padding: 30px;
+
+        // visual
+        list-style: none;
+    }
+
+    &__item {
+        // box model
+        padding-bottom: 10px;
+    }
+
+    & a {
+        // typography
+        color: $highlightColor;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 1.4;
+
+        &:hover {
+            // typography
+            text-decoration: underline;
+        }
+
+        &:before {
+            content: "— ";
+
+            // typography
+            color: #ffffff;
+        }
+    }
+}

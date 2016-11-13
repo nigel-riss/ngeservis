@@ -10,13 +10,17 @@
 @import "contacts";
 @import "main-menu";
 @import "activities";
+@import "main";
 @import "section";
+@import "sidebar";
 @import "main-footer";
 @import "footer-address";
 @import "footer-menu";
 
 body {
-    /*font-family: $titleFont;*/
+    // typography
+    font-family: $copyFont;
+
     // visual
     background-color: $darkColor;
     background-image: url("img/body-bg.png");

@@ -1,9 +1,13 @@
 .footer-address {
     /*border: 1px solid red;*/
     // box model
-    float: left;
+    @media(min-width: $tablet) {
+        float: left;
+        padding-top: 40px;
+    }
 
     // typography
+    color: $darkColor;
     font-size: 16px;
     line-height: 1.6;
 }

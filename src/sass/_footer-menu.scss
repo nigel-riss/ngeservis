@@ -1,7 +1,11 @@
 .footer-menu {
     /*border: 1px solid red;*/
     // box model 
-    float: right;
+    display: none;
+    @media(min-width: $tablet) {
+        display: block;
+        float: right;
+    }
 
     &__list {
         // box model
@@ -27,17 +31,17 @@
         padding: 10px;
 
         // typography
-        color: #ffffff;
+        color: $darkColor;
         font-size: 16px;
-        font-weight: 300;
+        font-weight: 400;
         text-decoration: none;
 
         &--active {
             // typography
-            color: $darkColor;
+            color: #ffffff;
 
             // visual
-            background-color: $highlightColor;;
+            background-color: $darkColor;
         }
     }
 }

@@ -1,6 +1,6 @@
 .section {
     // box model
-    padding-top: 20px;
+    padding-top: 40px;
     @media(min-width: $tablet) {
         padding-top: 40px;
     }
@@ -9,23 +9,48 @@
         // box model
         display: inline-block;
         padding: 10px 35px;
+        margin: 0;
+        margin-bottom: 20px;
+        @media(min-width: $desktop) {
+            max-width: 500px;
+        }
 
         // typography
         color: $darkColor;
         font-family: $copyFont;
         font-weight: 400;
         font-size: 30px;
+        line-height: 1.6;
 
         // visual
         background-color: $highlightColor;
     }
 
+    &__sub-caption {
+        // box model
+        @media(min-width: $desktop) {
+            width: 600px;
+        }
+
+        // typography
+        line-height: 1.6;
+
+        // typography
+        color: $highlightColor;
+        /*color: #fff;*/
+    }
+
     &__text {
+        // box model
+        @media(min-width: $desktop) {
+            width: 600px;
+        }
+
         // typography
         color: $copyColor;
         font-family: $copyFont;
         font-weight: 300;
-        line-height: 1.5;
+        line-height: 1.6;
     }
 
     &__list {
@@ -40,6 +65,9 @@
     &__item {
         // box model
         padding-bottom: 20px;
+        @media(min-width: $desktop) {
+            width: 600px;
+        }
 
         // typography
         color: $copyColor;
@@ -49,6 +77,9 @@
 
         &:before {
             content: "— ";
+
+            // typography
+            color: $highlightColor;
         }
     }
 }
