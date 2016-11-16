@@ -410,6 +410,7 @@ template {
     .hero {
       background-attachment: fixed; } }
   .hero--page {
+    /*background-image: none;*/
     background-position: center bottom;
     /*background-position: center -170px;*/
     background-attachment: scroll; }
@@ -490,6 +491,8 @@ template {
     background-color: #f7ce3e; }
     .main-menu__item--active .main-menu__link:hover:before {
       display: none; }
+  .main-menu__item a:hover {
+    text-decoration: none; }
   .main-menu__link {
     position: relative;
     display: block;
@@ -561,6 +564,13 @@ template {
   @media (min-width: 768px) {
     .section {
       padding-top: 40px; } }
+  .section--map iframe {
+    display: none; }
+    @media (min-width: 768px) {
+      .section--map iframe {
+        display: block;
+        padding-bottom: 0;
+        margin-bottom: -40px; } }
   .section__caption {
     display: inline-block;
     padding: 10px 35px;
@@ -569,12 +579,18 @@ template {
     color: #1a2930;
     font-family: "Open sans", Arial, Helvetica, sans-serif;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 20px;
     line-height: 1.6;
     background-color: #f7ce3e; }
     @media (min-width: 1000px) {
       .section__caption {
         max-width: 500px; } }
+    @media (min-width: 768px) {
+      .section__caption {
+        font-size: 25px; } }
+    @media (min-width: 1000px) {
+      .section__caption {
+        font-size: 30px; } }
   .section__sub-caption {
     line-height: 1.6;
     color: #f7ce3e;
@@ -606,6 +622,13 @@ template {
     .section__item:before {
       content: "— ";
       color: #f7ce3e; }
+  .section__image {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    border: 1px solid #f7ce3e; }
+    .section__image--no-border {
+      border: none; }
 
 .sidebar {
   border: 1px solid #f7ce3e; }
@@ -642,7 +665,7 @@ template {
   .main-footer:before {
     content: "";
     position: absolute;
-    top: -9px;
+    top: -8px;
     display: block;
     height: 9px;
     width: 100%;
@@ -657,7 +680,8 @@ template {
   @media (min-width: 768px) {
     .footer-address {
       float: left;
-      padding-top: 40px; } }
+      padding-top: 30px;
+      padding-bottom: 30px; } }
 
 .footer-menu {
   /*border: 1px solid red;*/
@@ -691,4 +715,7 @@ body {
   background-image: url("img/body-bg.png"); }
 
 a {
+  color: #f7ce3e;
   text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }

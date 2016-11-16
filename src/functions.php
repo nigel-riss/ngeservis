@@ -3,7 +3,8 @@
     function nge_theme_setup() {
         //Menu support
         register_nav_menus(array(
-            'primary' => __('Primary Menu')
+            'primary' => __('Primary Menu'),
+            'footer' => __('Footer Menu')
         ));
     }
 

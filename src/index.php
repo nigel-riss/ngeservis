@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php bloginfo('name'); ?></title>
 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
     <?php wp_head(); ?>
 </head>
@@ -40,21 +42,6 @@
 
                     wp_nav_menu($args);
                 ?>
-                <!--<ul class="main-menu__list">
-                    <li class="main-menu__item">
-                        <a href="" class="main-menu__link  main-menu__link--active">Главная</a>
-                    </li>
-                    <li class="main-menu__item">
-                        <a href="" class="main-menu__link">Деятельность</a>
-                    </li>
-                    <li class="main-menu__item">
-                        <a href="" class="main-menu__link">Спецпредложения</a>
-                    </li>
-                    <li class="main-menu__item">
-                        <a href="" class="main-menu__link">Контакты</a>
-                    </li>
-                </ul>-->
-
             </nav>
 
 
@@ -82,49 +69,6 @@
 
 
 
-    <main class="main">
-        <div class="container">
-            <?php
-                if (have_posts()) {
-                    while(have_posts()) {
-                        the_post();
-                        the_content();
-                    }
-                }
-            ?>
-        </div>
-    </main>
+<?php get_template_part('content-main'); ?>
 
-
-
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-address">
-                © ООО НИЦ «НефтеГазЭнергоСервис», 2009-2016<br>
-                117449 Москва, ул.Шверника д.7,<br>
-                тел./факс. 499-126-53-27
-            </div>
-
-            <nav class="footer-menu">
-                <ul class="footer-menu__list">
-                    <li class="footer-menu__item">
-                        <a href="" class="footer-menu__link  footer-menu__link--active">Главная</a>
-                    </li>
-                    <li class="footer-menu__item">
-                        <a href="" class="footer-menu__link">Деятельность</a>
-                    </li>
-                    <li class="footer-menu__item">
-                        <a href="" class="footer-menu__link">Спецпредложения</a>
-                    </li>
-                    <li class="footer-menu__item">
-                        <a href="" class="footer-menu__link">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </footer>
-
-    <?php wp_footer(); ?>
-</body>
-
-</html>
+<?php get_footer(); ?>

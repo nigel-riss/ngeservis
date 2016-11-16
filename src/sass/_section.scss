@@ -5,6 +5,18 @@
         padding-top: 40px;
     }
 
+    &--map {
+        // box model
+        & iframe {
+            display: none;
+            @media(min-width: $tablet) {
+                display: block;
+                padding-bottom: 0;
+                margin-bottom: -40px;
+            }
+        }
+    }
+
     &__caption {
         // box model
         display: inline-block;
@@ -19,8 +31,14 @@
         color: $darkColor;
         font-family: $copyFont;
         font-weight: 400;
-        font-size: 30px;
+        font-size: 20px;
         line-height: 1.6;
+        @media(min-width: $tablet) {
+            font-size: 25px;
+        }
+        @media(min-width: $desktop) {
+            font-size: 30px;
+        }
 
         // visual
         background-color: $highlightColor;
@@ -80,6 +98,21 @@
 
             // typography
             color: $highlightColor;
+        }
+    }
+
+    &__image {
+        // box model
+        display: block;
+        width: 100%;
+        margin: 20px 0;
+
+        // visual
+        border: 1px solid $highlightColor;
+
+        &--no-border {
+            // visual
+            border: none;
         }
     }
 }
