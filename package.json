@@ -4,12 +4,8 @@
   "author": "Yuriy Kurenkov",
   "version": "0.1.0",
   "devDependencies": {
-    "grunt-concat-css": "^0.3.1",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-csscomb": "^3.1.1",
-    "grunt-express": "^1.4.1",
-    "grunt-sass": "^1.2.1",
-    "load-grunt-tasks": "^3.5.2"
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
   }
 }

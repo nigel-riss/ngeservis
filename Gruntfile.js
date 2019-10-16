@@ -38,7 +38,7 @@ module.exports = function (grunt) {
                 // cwd: 'src/',
                 src: ['src/*.php',
                     'src/style.css'],
-                dest: 'G:/_xampp/htdocs/ngeservis/wp-content/themes/nge/'
+                dest: 'G:/xampp2/htdocs/ngeservice/wp-content/themes/nge/'
             }
         },
 

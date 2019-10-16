@@ -1,3 +1,6 @@
+<?php
+    //  Template Name: Main Page
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +8,9 @@
     <meta charset="UTF-8">
     <title><?php bloginfo('name'); ?></title>
 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+    <?php wp_head(); ?>
 </head>
 
 <body>
@@ -29,8 +34,8 @@
         <div class="container">
             <nav class="main-menu">
                 <ul class="main-menu__list">
-                    <li class="main-menu__item">
-                        <a href="" class="main-menu__link  main-menu__link--active">Главная</a>
+                    <li class="main-menu__item main-menu__item--active">
+                        <a href="" class="main-menu__link">Главная</a>
                     </li>
                     <li class="main-menu__item">
                         <a href="" class="main-menu__link">Деятельность</a>
@@ -108,40 +113,28 @@
                 </p>
             </section>
 
-            <?php
-                the_content();
-            ?>
+            <section class="section">
+                <h2 class="section__caption">
+                    Отзывы и постановления
+                </h2>
+                <p class="section__text">
+                    <?php
+                        if (have_posts()) {
+                            while(have_posts()) {
+                                the_post();
+                                the_content();
+                            }
+                        }
+                    ?>
+                </p>
+                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/activities.png" alt="" class="section__image  section__image--no-border" >
+            </section>
         </div>
     </main>
 
 
+    <?php get_footer(); ?>
 
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-address">
-                © ООО НИЦ «НефтеГазЭнергоСервис», 2009-2016<br>
-                117449 Москва, ул.Шверника д.7,<br>
-                тел./факс. 499-126-53-27
-            </div>
-
-            <nav class="footer-menu">
-                <ul class="footer-menu__list">
-                    <li class="footer-menu__item">
-                        <a href="" class="footer-menu__link  footer-menu__link--active">Главная</a>
-                    </li>
-                    <li class="footer-menu__item">
-                        <a href="" class="footer-menu__link">Деятельность</a>
-                    </li>
-                    <li class="footer-menu__item">
-                        <a href="" class="footer-menu__link">Спецпредложения</a>
-                    </li>
-                    <li class="footer-menu__item">
-                        <a href="" class="footer-menu__link">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </footer>
 </body>
 
 </html>
