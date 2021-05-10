@@ -1,34 +1,64 @@
 .hero {
+  // positioning
+  position: relative;
+
+  // box model
+  padding-bottom: 20px;
+
+  @media(min-width: $tablet) {
+    height: 540px;
+    /*padding-bottom: 0;*/
+  }
+
+  @media(min-width: $desktop) {
+    height: 700px;
+  }
+
+  // visual
+  background-image: url("img/bg-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @media(min-width: $desktop) {
+    background-attachment: fixed;
+  }
+
+  &--page {
+
     // box model
-    padding-bottom: 20px;
     @media(min-width: $tablet) {
-        height: 540px;
-        /*padding-bottom: 0;*/
-    }
-    @media(min-width: $desktop) {
-        height: 700px;
+      height: 130px;
     }
 
     // visual
-    background-image: url("img/bg-desktop.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    background-position: center bottom;
+  }
+}
 
-    @media(min-width: $desktop) {
-        background-attachment: fixed;
-    }
+.hero__top {
+  // box model
+  padding: 1rem;
 
-    &--page {
-        // box model
-        @media(min-width: $tablet) {
-            height: 130px;
-        }
+  // visual
+  background-color: $headerBgColor;
+}
 
-        // visual
-        /*background-image: none;*/
-        background-position: center bottom;
-        /*background-position: center -170px;*/
-        background-attachment: scroll;
-    }
+.hero__nav {
+
+}
+
+.hero__activities {
+  // box model
+  padding: 1rem;
+}
+
+.hero__menu-button {
+  // positioning
+  position: absolute;
+  top: 2.5rem;
+  right: 1rem;
+
+  // box model
+  width: 2rem;
 }

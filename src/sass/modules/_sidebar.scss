@@ -7,7 +7,7 @@
     }
 
     // visual
-    border: 1px solid $highlightColor;
+    border: 1px solid $orange;
 
     &__list {
         // box model
@@ -25,7 +25,7 @@
 
     & a {
         // typography
-        color: $highlightColor;
+        color: $orange;
         font-weight: 300;
         font-size: 14px;
         line-height: 1.4;

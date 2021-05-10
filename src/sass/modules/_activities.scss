@@ -1,12 +1,9 @@
-.activities {
-    // positioning
-    /*position: absolute;*/
-    top: 360px;
-
+ul.activities {
     // box model
     margin: 0;
     margin-top: 20px;
-    padding: 20px 30px 10px 30px;
+    padding: 2rem 1rem;
+
     @media(min-width: $desktop) {
         margin-top: 90px;
         width: 600px;
@@ -15,29 +12,26 @@
     // visual
     background-color: $headerBgColor;
     list-style: none;
-    /*filter: blur(5px);*/
-    /*background-image: url("../img/bg-blur.jpg");
-    background-position: -460px -322px;*/
+    backdrop-filter: blur(3px);
+}
 
-    &__item {
-        // box model
-        padding-bottom: 15px;
+.activities__item {
+    // box model
+    padding-bottom: 15px;
+
+    // typography
+    color: $white;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    @media(min-width: $tablet) {
+        font-size: 18px;
+    }
+
+    &:before {
+        content: "— ";
 
         // typography
-        color: $copyColor;
-        font-family: $copyFont;
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 1.5;
-        @media(min-width: $tablet) {
-            font-size: 18px;
-        }
-
-        &:before {
-            content: "— ";
-
-            // typography
-            color: $highlightColor;
-        }
+        color: $orange;
     }
 }

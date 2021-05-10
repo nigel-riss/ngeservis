@@ -41,7 +41,7 @@
         }
 
         // visual
-        background-color: $highlightColor;
+        background-color: $orange;
     }
 
     &__sub-caption {
@@ -54,7 +54,7 @@
         line-height: 1.6;
 
         // typography
-        color: $highlightColor;
+        color: $orange;
         /*color: #fff;*/
     }
 
@@ -65,7 +65,7 @@
         }
 
         // typography
-        color: $copyColor;
+        color: $white;
         font-family: $copyFont;
         font-weight: 300;
         line-height: 1.6;
@@ -88,7 +88,7 @@
         }
 
         // typography
-        color: $copyColor;
+        color: $white;
         font-family: $copyFont;
         font-weight: 300;
         line-height: 1.5;
@@ -97,7 +97,7 @@
             content: "— ";
 
             // typography
-            color: $highlightColor;
+            color: $orange;
         }
     }
 
@@ -108,7 +108,7 @@
         margin: 20px 0;
 
         // visual
-        border: 1px solid $highlightColor;
+        border: 1px solid $orange;
 
         &--no-border {
             // visual

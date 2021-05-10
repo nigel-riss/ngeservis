@@ -1,12 +1,16 @@
 'use strict';
 
-const gulp = require('gulp');
-const server = require('browser-sync').create();
-const sass = require('gulp-sass');
+const server      = require('browser-sync').create();
+const gulp        = require('gulp');
+const pug         = require(`gulp-pug`);
+const embedSVG    = require(`gulp-embed-svg`);
+const sass        = require('gulp-sass');
 
 
 // Paths
 const dirs = {
+  pugMain:        `./src/pug/*.pug`,
+  svg:            `./src/img/**/*.svg`,
   scss:           './src/sass/style.scss',
   scssWatch:      './src/sass/**/*.scss',
   js:             './src/js/**/*.js',
@@ -35,14 +39,29 @@ const startServer = () => {
 };
 
 
-/**
- * Reloads browser sync server
- * @param {Function} done callback
- */
-const reloadServer = (done) => {
-  server.reload();
-  done();
-}
+// Render html from pug
+const renderPug = (cb) => {
+  gulp
+    .src(dirs.pugMain)
+    .pipe(pug({
+      pretty: true,
+      data: {},
+    }))
+    .on(`error`, (err) => {
+      console.log("\x1b[31m", err.message, "\x1b[0m");
+    })
+    .pipe(embedSVG({
+      root: `./src/`,
+    }))
+    .on(`error`, (err) => {
+      console.log("\x1b[31m", err.message, "\x1b[0m");
+    })
+    .pipe(gulp.dest(dirs.dist))
+    .pipe(server.stream());
+
+  cb();
+};
+
 
 /**
  * Compiles scss files to styles.css
@@ -85,7 +104,8 @@ const copyPHP = (cb) => {
  */
 const watch = () => {
   startServer();
-  gulp.watch(dirs.scssWatch, gulp.series(compileStyles));
+  gulp.watch(dirs.pugMain, renderPug);
+  gulp.watch(dirs.scssWatch, compileStyles);
   // gulp.watch(dirs.js, gulp.series(compileScripts, reloadServer));
   // gulp.watch(dirs.php, gulp.series(copyPHP));
 };
@@ -98,4 +118,6 @@ exports.scripts = compileScripts;
 exports.startServer = startServer;
 
 // Watch
-exports.watch = watch;
+exports.watch     = watch;
+exports.pug       = renderPug;
+exports.styles    = compileStyles;

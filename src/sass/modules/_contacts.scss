@@ -1,29 +1,22 @@
 .contacts {
-    // box model
-    display: block;
-    /*vertical-align: top;*/
-    @media(min-width: $tablet) {
-        float: right;
-    }
+  // box model
+  display: block;
 
+  // typography
+  text-align: right;
+
+  & a {
     // typography
-    text-align: right;
-    color: #ffffff;
+    color: $orange;
+    font-size: 14px;
+    // font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    // text-transform: uppercase;
 
-
-
-    & a {
-        // typography
-        color: #ffffff;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 1.5;
-        text-decoration: none;
-        text-transform: uppercase;
-
-        &:hover {
-            // typography
-            color: $highlightColor;
-        }
+    &:hover {
+      // typography
+      color: $orange;
     }
+  }
 }

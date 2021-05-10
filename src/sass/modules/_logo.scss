@@ -1,13 +1,21 @@
 .logo {
-    // box model
-    /*display: inline-block;*/
-    float: left;
-    /*vertical-align: top;*/
-    width: 20px;
-    height: auto;
+  // box model
+  display: flex;
+  align-items: flex-end;
+  height: auto;
+  margin-bottom: 2rem;
+}
 
-    &__image {
-        // box model
-        width: 100%;
-    }
+.logo__image {
+  // box model
+  height: 2.5rem;
+  margin-right: 0.5rem;
+}
+
+.logo__image svg {
+  // box model
+  height: 100%;
+
+  // visual
+  fill: $white;
 }

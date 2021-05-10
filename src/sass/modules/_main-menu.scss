@@ -1,89 +1,77 @@
 .main-menu {
-    // box model
-    padding-top: 20px;
+  // box model
+  padding: 1rem;
 
+  // typography
+  text-align: right;
+}
+
+.main-menu__item {
+  // box model
+  @media(min-width: $tablet) {
+    display: inline-block;
+  }
+
+  &--active .main-menu__link {
     // typography
-    text-align: right;
+    color: $darkColor;
 
-    &__list {
-        // box model
-        margin: 0;
-        padding: 0;
+    // visual
+    background-color: $orange;
 
-        // visual
-        list-style: none;
+    &:hover:before {
+      display: none;
     }
+  }
 
-    &__item {
-        // box model
-        @media(min-width: $tablet) {
-            display: inline-block;
-        }
+  & a:hover {
+    // typography
+    text-decoration: none;
+  }
+}
 
-        &--active .main-menu__link {
-            // typography
-            color: $darkColor;
+.main-menu__link {
+  // positioning
+  position: relative;
 
-            // visual
-            background-color: $highlightColor;
+  // box model
+  display: block;
+  padding: 10px 15px;
 
-            &:hover:before {
-                display: none;
-            }
-        }
+  // typography
+  color: $white;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  text-transform: uppercase;
 
-        & a:hover {
-            // typography
-            text-decoration: none;
-        }
-    }
+  &:before {
+    content: "";
 
-    &__link {
-        // positioning
-        position: relative;
+    // positioning
+    position: absolute;
+    bottom: -20px;
+    left: 0;
 
-        // box model
-        display: block;
-        padding: 10px 15px;
+    // box model
+    height: 2px;
+    width: 100%;
 
-        // typography
-        color: $menuColor;
-        font-family: $titleFont;
-        /*font-family: "Open Sans";*/
-        font-weight: 700;
-        font-size: 14px;
-        letter-spacing: 0.5px;
-        text-decoration: none;
-        text-transform: uppercase;
+    // visual
+    background-color: $orange;
+    opacity: 0;
+    transition: all 0.2s ease-in;
+  }
 
-        &:before {
-            content: "";
+  &:hover:before {
+    // positioning
+    bottom: 0;
 
-            // positioning
-            position: absolute;
-            bottom: -20px;
-            left: 0;
+    // box model
+    display: block;
 
-            // box model
-            /*display: none;*/
-            height: 2px;
-            width: 100%;
-
-            // visual
-            background-color: $highlightColor;
-            opacity: 0;
-            transition: all 0.2s ease-in;
-        }
-
-        &:hover:before {
-            // positioning
-            bottom: 0;
-
-            // box model
-            display: block;
-
-            // visual
-            opacity: 1;
-        }
-    }
+    // visual
+    opacity: 1;
+  }
 }
