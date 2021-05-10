@@ -1,33 +1,31 @@
 .main-footer {
-    // positioning
-    position: relative;
+  // positioning
+  position: relative;
 
-    // box model 
-    padding: 20px 0;
-    color: white;
+  // box model
+  padding: 2rem 1rem;
 
-    // typography
-    font-size: 0;
+  // typography
+  font-size: 0;
 
-    // visual
-    background-color: $orange;
-    background-image: url("img/footer-bg.png");
-    /*background-color: #000000;*/
+  // visual
+  background-color: $orange;
+  background-image: url("img/footer-bg.png");
 
-    &:before {
-        content: "";
+  // &:before {
+  //   content: "";
 
-        // positioning
-        position: absolute;
-        top: -8px;
+  //   // positioning
+  //   position: absolute;
+  //   top: -8px;
 
-        // box model
-        display: block;
-        height: 9px;
-        width: 100%;
+  //   // box model
+  //   display: block;
+  //   height: 9px;
+  //   width: 100%;
 
-        // visual
-        /*border: 1px solid red;*/
-        background-image: url("img/footer-border.png");
-    }
+  //   // visual
+  //   /*border: 1px solid red;*/
+  //   background-image: url("img/footer-border.png");
+  // }
 }

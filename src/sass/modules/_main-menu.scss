@@ -51,25 +51,23 @@
 
     // positioning
     position: absolute;
-    bottom: -20px;
-    left: 0;
+    bottom: 0;
+    right: 0;
 
     // box model
     height: 2px;
-    width: 100%;
+    width: 0;
 
     // visual
     background-color: $orange;
     opacity: 0;
-    transition: all 0.2s ease-in;
+    transition: all 0.325s ease-in-out;
   }
 
   &:hover:before {
-    // positioning
-    bottom: 0;
-
     // box model
     display: block;
+    width: 100%;
 
     // visual
     opacity: 1;

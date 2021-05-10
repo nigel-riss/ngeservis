@@ -1,14 +1,20 @@
 .footer-address {
-    /*border: 1px solid red;*/
-    // box model
-    @media(min-width: $tablet) {
-        float: left;
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
+  // box model
+  margin-bottom: 2rem;
+  
+  // typography
+  color: $darkColor;
+  font-size: 0.85rem;
 
+  @media(min-width: $tablet) {
+    float: left;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  a {
     // typography
     color: $darkColor;
-    font-size: 16px;
-    line-height: 1.6;
+    font-weight: 700;
+  }
 }
