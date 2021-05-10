@@ -181,36 +181,12 @@ a {
     .company-name {
       font-size: 22px; } }
 
-ul.activities {
-  margin: 0;
-  margin-top: 20px;
-  padding: 2rem 1rem;
-  background-color: rgba(20, 31, 37, 0.75);
-  list-style: none;
-  backdrop-filter: blur(3px); }
-  @media (min-width: 1000px) {
-    ul.activities {
-      margin-top: 90px;
-      width: 600px; } }
-
-.activities__item {
-  padding-bottom: 15px;
-  color: #ffffff;
-  font-size: 1rem;
-  line-height: 1.5; }
-  @media (min-width: 768px) {
-    .activities__item {
-      font-size: 18px; } }
-  .activities__item:before {
-    content: "— ";
-    color: #f7ce3e; }
-
 .contacts {
   display: block;
   text-align: right; }
   .contacts a {
     color: #f7ce3e;
-    font-size: 14px;
+    font-size: 1rem;
     line-height: 1.5;
     text-decoration: none; }
     .contacts a:hover {
@@ -257,3 +233,73 @@ ul.activities {
     bottom: 0;
     display: block;
     opacity: 1; }
+
+.section {
+  padding: 2rem 1rem; }
+
+.section--map iframe {
+  display: none; }
+  @media (min-width: 768px) {
+    .section--map iframe {
+      display: block;
+      padding-bottom: 0;
+      margin-bottom: -40px; } }
+
+.section__caption {
+  display: inline-block;
+  padding: 10px 35px;
+  margin: 0;
+  margin-bottom: 20px;
+  color: #1a2930;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+  background-color: #f7ce3e; }
+  @media (min-width: 1000px) {
+    .section__caption {
+      max-width: 500px; } }
+  @media (min-width: 768px) {
+    .section__caption {
+      font-size: 25px; } }
+  @media (min-width: 1000px) {
+    .section__caption {
+      font-size: 30px; } }
+
+.section__sub-caption {
+  line-height: 1.6;
+  color: #f7ce3e;
+  /*color: #fff;*/ }
+  @media (min-width: 1000px) {
+    .section__sub-caption {
+      width: 600px; } }
+
+.section__text {
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-size: 0.85rem; }
+  .section__text strong {
+    color: #f7ce3e; }
+  @media (min-width: 1000px) {
+    .section__text {
+      width: 600px; } }
+
+.section__item {
+  padding-bottom: 1rem;
+  font-size: 0.85rem;
+  color: #ffffff;
+  font-weight: 300;
+  line-height: 1.5; }
+  @media (min-width: 1000px) {
+    .section__item {
+      width: 600px; } }
+  .section__item:before {
+    content: "— ";
+    color: #f7ce3e; }
+
+.section__image {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+  border: 1px solid #f7ce3e; }
+  .section__image--no-border {
+    border: none; }
