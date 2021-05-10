@@ -6,11 +6,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <title><?php bloginfo('name'); ?></title>
-
+    
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
     <?php wp_head(); ?>
+
+    <title><?php bloginfo('name'); ?> — Главная</title>
 </head>
 
 <body>
@@ -35,16 +36,16 @@
             <nav class="main-menu">
                 <ul class="main-menu__list">
                     <li class="main-menu__item main-menu__item--active">
-                        <a href="" class="main-menu__link">Главная</a>
+                        <a href="<?php echo esc_url(home_url('/')); ?>" class="main-menu__link">Главная</a>
                     </li>
                     <li class="main-menu__item">
-                        <a href="" class="main-menu__link">Деятельность</a>
+                        <a href="<?php echo esc_url(home_url('/')); ?>activities" class="main-menu__link">Деятельность</a>
                     </li>
                     <li class="main-menu__item">
-                        <a href="" class="main-menu__link">Спецпредложения</a>
+                        <a href="<?php echo esc_url(home_url('/')); ?>offers" class="main-menu__link">Спецпредложения</a>
                     </li>
                     <li class="main-menu__item">
-                        <a href="" class="main-menu__link">Контакты</a>
+                        <a href="<?php echo esc_url(home_url('/')); ?>contacts" class="main-menu__link">Контакты</a>
                     </li>
                 </ul>
             </nav>

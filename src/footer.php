@@ -1,8 +1,8 @@
 <footer class="main-footer">
         <div class="container">
             <div class="footer-address">
-                © ООО НИЦ «НефтеГазЭнергоСервис», 2009-2019<br>
-                117449 Москва, ул.Шверника д.7,<br>
+                © ООО НИЦ «НефтеГазЭнергоСервис», 2009-2021<br>
+                117209, г. Москва, Севастопольский проспект, д.28, корп. 8, 82.<br>
                 тел./факс. 499-126-53-27
             </div>
 
@@ -26,6 +26,6 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/scripts.js"></script>
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>/scripts.js"></script>
 
     <?php wp_footer(); ?>

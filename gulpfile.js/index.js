@@ -11,7 +11,7 @@ const dirs = {
   scssWatch: './src/sass/**/*.scss',
   js: './src/js/**/*.js',
   php: './src/*.php',
-  wp: 'G:/xampp2/htdocs/ngeservice/wp-content/themes/nge',
+  wp: '/mnt/e/xampp/htdocs/ngeservice/wp-content/themes/nge',
 };
 
 /**

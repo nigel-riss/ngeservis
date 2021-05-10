@@ -2,10 +2,10 @@
   "name": "nefte-gaz-energo-servis",
   "description": "Wordpress templates for NefteGazEnegroServis site",
   "author": "Yuriy Kurenkov",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.26.14",
     "gulp": "^4.0.2",
-    "gulp-sass": "^4.0.2"
+    "gulp-sass": "^4.1.0"
   }
 }
