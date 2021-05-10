@@ -7,11 +7,13 @@ const sass = require('gulp-sass');
 
 // Paths
 const dirs = {
-  scss: './src/sass/style.scss',
-  scssWatch: './src/sass/**/*.scss',
-  js: './src/js/**/*.js',
-  php: './src/*.php',
-  wp: '/mnt/e/xampp/htdocs/ngeservice/wp-content/themes/nge',
+  scss:           './src/sass/style.scss',
+  scssWatch:      './src/sass/**/*.scss',
+  js:             './src/js/**/*.js',
+  php:            './src/*.php',
+  wp:             '/mnt/e/xampp/htdocs/ngeservice/wp-content/themes/nge',
+
+  dist:         `./docs`,
 };
 
 /**
@@ -20,9 +22,15 @@ const dirs = {
 const startServer = () => {
   server.init({
     server: {
-      baseDir: './src',
+      baseDir: dirs.dist,
     },
-    port: 1337
+    port: 1337,
+    ghostMode: {
+      clicks: false,
+      forms: false,
+      location: false,
+      scroll: false,
+    },
   });
 };
 
@@ -43,9 +51,9 @@ const reloadServer = (done) => {
  */
 const compileStyles = (cb) => {
   gulp.src(dirs.scss)
-    .pipe(sass())
-    .pipe(gulp.dest('./src/css'))
-    .pipe(server.reload({stream: true}))
+    .pipe(sass().on(`error`, sass.logError))
+    .pipe(gulp.dest(dirs.dist))
+    .pipe(server.stream())
     .pipe(gulp.dest(dirs.wp));
 
     cb();
@@ -78,8 +86,8 @@ const copyPHP = (cb) => {
 const watch = () => {
   startServer();
   gulp.watch(dirs.scssWatch, gulp.series(compileStyles));
-  gulp.watch(dirs.js, gulp.series(compileScripts, reloadServer));
-  gulp.watch(dirs.php, gulp.series(copyPHP));
+  // gulp.watch(dirs.js, gulp.series(compileScripts, reloadServer));
+  // gulp.watch(dirs.php, gulp.series(copyPHP));
 };
 
 

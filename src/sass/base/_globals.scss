@@ -1,0 +1,65 @@
+html {
+  // positioning
+  position: relative;
+
+  // typography
+  font-family: 'Rubik', sans-serif;
+  font-size: 4.75vw;
+
+  @include atTablet {
+    // typography
+    font-size: 2.5vw;
+  }
+
+  @include atDesktopS {
+    font-size: 1.5vw;
+  }
+  
+  @include atDesktopM {
+    font-size: 18px;
+  }
+}
+
+body {
+  // positioning
+  position: relative;
+
+  // typography
+  color: $copyColor;
+
+  // visual
+  background-color: $darkColor;
+  background-image: url("img/body-bg.png");
+  overflow-x: hidden;
+}
+
+.nowrap {
+  // typography
+  white-space: nowrap;
+}
+
+.mobile-only {
+  @include atDesktopS {
+    // box model
+    display: none !important;
+  }
+}
+
+.desktop-only {
+  // box model
+  display: none !important;
+
+  @include atDesktopS {
+    // box model
+    display: block !important;
+  }
+}
+
+a {
+  // typography
+  color: $highlightColor;
+  text-decoration: none;
+  &:hover {
+      text-decoration: underline;
+  }
+}

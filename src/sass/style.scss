@@ -1,42 +1,29 @@
-/*
-    Theme Name: NGEService
-    Description: Special theme for NGEService
-    Author: Yuriy Kurenkov
-*/
+@charset 'utf-8';
 
-@import "normalize";
-@import "vars";
-@import "mixins";
+// Base
+@import './base/wordpress';
+@import './base/reset';
+@import './base/vars';
+@import './base/mixins';
+@import './base/globals';
 
-@import "container";
-@import "hero";
-@import "header-bar";
-@import "logo";
-@import "company-name";
-@import "contacts";
-@import "main-menu";
-@import "activities";
-@import "main";
-@import "section";
-@import "sidebar";
-@import "main-footer";
-@import "footer-address";
-@import "footer-menu";
 
-body {
-    // typography
-    font-family: $copyFont;
+// Fonts
+@import './fonts/fonts';
 
-    // visual
-    background-color: $darkColor;
-    background-image: url("img/body-bg.png");
-}
 
-a {
-    // typography
-    color: $highlightColor;
-    text-decoration: none;
-    &:hover {
-        text-decoration: underline;
-    }
-}
+// Modules
+// @import "./modules/container";
+// @import "./modules/hero";
+// @import "./modules/header-bar";
+// @import "./modules/logo";
+// @import "./modules/company-name";
+// @import "./modules/contacts";
+// @import "./modules/main-menu";
+// @import "./modules/activities";
+// @import "./modules/main";
+// @import "./modules/section";
+// @import "./modules/sidebar";
+// @import "./modules/main-footer";
+// @import "./modules/footer-address";
+// @import "./modules/footer-menu";

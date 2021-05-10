@@ -1,5 +1,3 @@
-
-
 // breakpoints
 $mobile: 320px;
 $tablet: 768px;
@@ -13,7 +11,5 @@ $highlightColor: #f7ce3e;
 $headerBgColor: rgba(20, 31, 37, 0.75);
 
 
-// fonts
-/*$titleFont: "Baron Neue", Arial, Helvetica, sans-serif;*/
-$titleFont: "Open sans", Arial, Helvetica, sans-serif;
-$copyFont: "Open sans", Arial, Helvetica, sans-serif;
+$dPadding: calc(50vw - 34rem);
+// $dPaddingL: calc(50vw - 39rem);
