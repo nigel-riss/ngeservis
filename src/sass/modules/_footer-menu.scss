@@ -1,24 +1,19 @@
-.footer-menu__list {
+.footer-menu {
   // box model
-  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .footer-menu__link {
-  // box model 
+  // box model
   display: block;
-  padding: 10px;
+  padding: 0.25rem 0;
+  margin-bottom: 0.25rem;
 
   // typography
-  color: $darkColor;
-  font-size: 16px;
-  font-weight: 400;
+  color: $dark;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
   text-decoration: none;
-
-  &--active {
-    // typography
-    color: #ffffff;
-
-    // visual
-    background-color: $darkColor;
-  }
+  text-transform: uppercase;
 }

@@ -2,9 +2,6 @@
   // positioning
   position: relative;
 
-  // box model
-  padding-bottom: 20px;
-
   @media(min-width: $tablet) {
     height: 540px;
     /*padding-bottom: 0;*/
@@ -15,14 +12,11 @@
   }
 
   // visual
-  background-image: url("img/bg-desktop.jpg");
+  background-image: url("img/bg-desktop copy.jpg");
   background-repeat: no-repeat;
   background-position: center center;
+  // background-position: bottom center;
   background-size: cover;
-
-  @media(min-width: $desktop) {
-    background-attachment: fixed;
-  }
 
   &--page {
 
@@ -41,7 +35,12 @@
   padding: 1rem;
 
   // visual
-  background-color: $headerBgColor;
+  background-color: rgba($headerBgColor, 0.85);
+  
+  @include atDesktopS {
+    // visual
+    background-color: rgba($headerBgColor, 0.75);
+  }
 }
 
 .hero__nav {

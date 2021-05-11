@@ -1,9 +1,6 @@
 .footer-address {
-  // box model
-  margin-bottom: 2rem;
-  
   // typography
-  color: $darkColor;
+  color: $dark;
   font-size: 0.85rem;
 
   @media(min-width: $tablet) {
@@ -14,7 +11,7 @@
 
   a {
     // typography
-    color: $darkColor;
-    font-weight: 700;
+    color: $dark;
+    font-weight: 600;
   }
 }

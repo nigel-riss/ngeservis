@@ -469,7 +469,7 @@ template {
   .contacts a {
     color: #ffffff;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.5;
     text-decoration: none;
     text-transform: uppercase; }
@@ -500,7 +500,7 @@ template {
     color: #ffffff;
     font-family: "Open sans", Arial, Helvetica, sans-serif;
     /*font-family: "Open Sans";*/
-    font-weight: 700;
+    font-weight: 600;
     font-size: 14px;
     letter-spacing: 0.5px;
     text-decoration: none;

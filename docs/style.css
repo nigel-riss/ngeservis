@@ -4,7 +4,7 @@
     Description: Special theme for NGEService
     Author: Yuriy Kurenkov
 */
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap");
 body {
   box-sizing: border-box; }
 
@@ -107,8 +107,7 @@ a {
 
 .hero {
   position: relative;
-  padding-bottom: 20px;
-  background-image: url("img/bg-desktop.jpg");
+  background-image: url("img/bg-desktop copy.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
@@ -119,9 +118,6 @@ a {
   @media (min-width: 1000px) {
     .hero {
       height: 700px; } }
-  @media (min-width: 1000px) {
-    .hero {
-      background-attachment: fixed; } }
   .hero--page {
     background-position: center bottom; }
     @media (min-width: 768px) {
@@ -130,7 +126,10 @@ a {
 
 .hero__top {
   padding: 1rem;
-  background-color: rgba(20, 31, 37, 0.75); }
+  background-color: rgba(20, 31, 37, 0.85); }
+  @media (min-width: 1000px) {
+    .hero__top {
+      background-color: rgba(20, 31, 37, 0.75); } }
 
 .hero__activities {
   padding: 1rem; }
@@ -193,12 +192,17 @@ a {
       color: #f7ce3e; }
 
 .main-menu {
-  padding: 1rem;
-  text-align: right; }
+  padding: 2rem 1rem;
+  text-align: right;
+  background-image: linear-gradient(to bottom, rgba(20, 31, 37, 0.75), transparent);
+  backdrop-filter: blur(3px); }
 
-@media (min-width: 768px) {
-  .main-menu__item {
-    display: inline-block; } }
+.main-menu__list {
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 1000px) {
+    .main-menu__list {
+      align-items: flex-end; } }
 
 .main-menu__item--active .main-menu__link {
   color: #1a2930;
@@ -214,7 +218,7 @@ a {
   display: block;
   padding: 10px 15px;
   color: #ffffff;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.85rem;
   letter-spacing: 0.05em;
   text-decoration: none;
@@ -306,13 +310,13 @@ a {
 
 .main-footer {
   position: relative;
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
+  padding-bottom: 4rem;
   font-size: 0;
   background-color: #f7ce3e;
   background-image: url("img/footer-bg.png"); }
 
 .footer-address {
-  margin-bottom: 2rem;
   color: #1a2930;
   font-size: 0.85rem; }
   @media (min-width: 768px) {
@@ -322,18 +326,18 @@ a {
       padding-bottom: 30px; } }
   .footer-address a {
     color: #1a2930;
-    font-weight: 700; }
+    font-weight: 600; }
 
-.footer-menu__list {
-  text-align: center; }
+.footer-menu {
+  margin-bottom: 3rem; }
 
 .footer-menu__link {
   display: block;
-  padding: 10px;
+  padding: 0.25rem 0;
+  margin-bottom: 0.25rem;
   color: #1a2930;
-  font-size: 16px;
-  font-weight: 400;
-  text-decoration: none; }
-  .footer-menu__link--active {
-    color: #ffffff;
-    background-color: #1a2930; }
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  text-transform: uppercase; }
