@@ -1,6 +1,6 @@
 .section {
   // box model
-  padding: 2rem 1rem;
+  margin-bottom: 2rem;
 }
 
 .section--map {
@@ -48,6 +48,7 @@
 .section__sub-caption {
   // typography
   color: $orange;
+  margin-bottom: 1rem;
 
   // box model
   @media(min-width: $desktop) {

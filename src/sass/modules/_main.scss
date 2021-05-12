@@ -1,11 +1,12 @@
 .main {
-    // box model
-    padding-bottom: 40px;
+  // box model
+  padding: 2rem 1rem;
 
-    @media(min-width: $tablet) {
-        padding-top: 20px;
-    }
-    @media(min-width: $desktop) {
-        padding-top: 40px;
-    }
+  @media(min-width: $tablet) {
+    padding-top: 20px;
+  }
+
+  @media(min-width: $desktop) {
+    padding-top: 40px;
+  }
 }
