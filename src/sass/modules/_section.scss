@@ -12,7 +12,7 @@
     @media(min-width: $tablet) {
       display: block;
       padding-bottom: 0;
-      margin-bottom: -40px;
+      margin-bottom: 2rem;
     }
   }
 }
@@ -20,19 +20,21 @@
 .section__caption {
   // box model
   display: inline-block;
-  padding: 10px 35px;
+  padding: 0.5rem 2rem;
   margin: 0;
-  margin-bottom: 20px;
-
-  @media(min-width: $desktop) {
-    max-width: 500px;
-  }
+  margin-bottom: 1.5rem;
 
   // typography
   color: $dark;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 1.6;
+  font-size: 1.5rem;
+
+  // visual
+  background-color: $orange;
+
+  @media(min-width: $desktop) {
+    max-width: 500px;
+  }
 
   @media(min-width: $tablet) {
     font-size: 25px;
@@ -41,24 +43,16 @@
   @media(min-width: $desktop) {
     font-size: 30px;
   }
-
-  // visual
-  background-color: $orange;
 }
 
 .section__sub-caption {
+  // typography
+  color: $orange;
 
   // box model
   @media(min-width: $desktop) {
     width: 600px;
   }
-
-  // typography
-  line-height: 1.6;
-
-  // typography
-  color: $orange;
-  /*color: #fff;*/
 }
 
 .section__text {
@@ -86,16 +80,14 @@
   padding-bottom: 1rem;
 
   // typography
+  color: $white;
   font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 1.5;
 
   @media(min-width: $desktop) {
     width: 600px;
   }
-
-  // typography
-  color: $white;
-  font-weight: 300;
-  line-height: 1.5;
 
   &:before {
     content: "— ";

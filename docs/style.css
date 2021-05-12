@@ -219,7 +219,7 @@ a {
   padding: 10px 15px;
   color: #ffffff;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   letter-spacing: 0.05em;
   text-decoration: none;
   text-transform: uppercase; }
@@ -247,17 +247,16 @@ a {
     .section--map iframe {
       display: block;
       padding-bottom: 0;
-      margin-bottom: -40px; } }
+      margin-bottom: 2rem; } }
 
 .section__caption {
   display: inline-block;
-  padding: 10px 35px;
+  padding: 0.5rem 2rem;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
   color: #1a2930;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 1.6;
+  font-size: 1.5rem;
   background-color: #f7ce3e; }
   @media (min-width: 1000px) {
     .section__caption {
@@ -270,9 +269,7 @@ a {
       font-size: 30px; } }
 
 .section__sub-caption {
-  line-height: 1.6;
-  color: #f7ce3e;
-  /*color: #fff;*/ }
+  color: #f7ce3e; }
   @media (min-width: 1000px) {
     .section__sub-caption {
       width: 600px; } }
@@ -289,8 +286,8 @@ a {
 
 .section__item {
   padding-bottom: 1rem;
-  font-size: 0.85rem;
   color: #ffffff;
+  font-size: 0.85rem;
   font-weight: 300;
   line-height: 1.5; }
   @media (min-width: 1000px) {

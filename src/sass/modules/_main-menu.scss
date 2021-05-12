@@ -22,7 +22,6 @@
 }
 
 .main-menu__item {
-
   &--active .main-menu__link {
     // typography
     color: $dark;
@@ -52,7 +51,7 @@
   // typography
   color: $white;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   letter-spacing: 0.05em;
   text-decoration: none;
   text-transform: uppercase;
