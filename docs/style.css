@@ -126,6 +126,7 @@ a {
 .hero__top {
   padding: 1rem;
   padding-right: 1.5rem;
+  padding-bottom: 1.25rem;
   background-color: rgba(20, 31, 37, 0.85); }
   @media (min-width: 1000px) {
     .hero__top {
@@ -196,7 +197,6 @@ a {
 
 .main-menu {
   padding: 2rem 0.75rem;
-  text-align: right;
   background-image: linear-gradient(to bottom, rgba(20, 31, 37, 0.75), transparent);
   backdrop-filter: blur(2px); }
 
@@ -211,7 +211,8 @@ a {
   margin-bottom: 0.125rem; }
   .main-menu__item--active .main-menu__link {
     color: #1a2930;
-    background-color: #f7ce3e; }
+    background-color: #f7ce3e;
+    background-image: url("img/footer-bg.png"); }
     .main-menu__item--active .main-menu__link:hover:before {
       display: none; }
   .main-menu__item a:hover {
@@ -220,7 +221,7 @@ a {
 .main-menu__link {
   position: relative;
   display: block;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 1.5rem;
   color: #ffffff;
   font-weight: 700;
   font-size: 0.8rem;
@@ -231,7 +232,7 @@ a {
     content: "";
     position: absolute;
     bottom: 0;
-    right: 0;
+    left: 0.75rem;
     height: 2px;
     width: 0;
     background-color: #f7ce3e;
@@ -259,14 +260,29 @@ a {
   margin: 0 -1.5rem; }
 
 .section__caption {
-  display: inline-block;
-  padding: 0.5rem 0.75rem;
+  position: relative;
+  padding: 0.5rem 1.5rem;
   margin-left: -0.75rem;
   margin-bottom: 1.5rem;
   color: #1a2930;
   font-weight: 400;
   font-size: 1.5rem;
-  background-color: #f7ce3e; }
+  font-size: 0.8rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background-color: #f7ce3e;
+  background-image: url("img/footer-bg.png"); }
+  .section__caption::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(0.75rem - 1px);
+    display: block;
+    height: 100%;
+    width: 2px;
+    background-color: #1a2930; }
   @media (min-width: 1000px) {
     .section__caption {
       max-width: 500px; } }
@@ -278,8 +294,9 @@ a {
       font-size: 30px; } }
 
 .section__sub-caption {
+  margin-bottom: 1rem;
   color: #f7ce3e;
-  margin-bottom: 1rem; }
+  font-size: 0.85rem; }
   @media (min-width: 1000px) {
     .section__sub-caption {
       width: 600px; } }

@@ -9,9 +9,11 @@
 }
 
 .section__caption {
+  // positioning
+  position: relative;
+
   // box model
-  display: inline-block;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 1.5rem;
   margin-left: -0.75rem;
   margin-bottom: 1.5rem;
 
@@ -20,10 +22,35 @@
   font-weight: 400;
   font-size: 1.5rem;
 
+  font-size: 0.8rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
   // visual
   background-color: $orange;
+  background-image: url("img/footer-bg.png");
+
+  &::after {
+    content: '';
+
+    // positioning
+    position: absolute;
+    top: 0;
+    left: calc(0.75rem - 1px);
+
+    // box model
+    display: block;
+    height: 100%;
+    width: 2px;
+
+    // visual
+    background-color: $dark;
+  }
 
   @media(min-width: $desktop) {
+    // display: inline-block;
     max-width: 500px;
   }
 
@@ -37,9 +64,12 @@
 }
 
 .section__sub-caption {
+  // box model
+  margin-bottom: 1rem;
+
   // typography
   color: $orange;
-  margin-bottom: 1rem;
+  font-size: 0.85rem;
 
   // box model
   @media(min-width: $desktop) {
@@ -64,7 +94,6 @@
   @media(min-width: $desktop) {
     width: 600px;
   }
-
 }
 
 .section__item {
