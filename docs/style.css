@@ -139,7 +139,8 @@ a {
   position: absolute;
   top: 2.5rem;
   right: 1rem;
-  width: 2rem; }
+  width: 2rem;
+  display: none; }
 
 .menu-button {
   display: block;
@@ -155,18 +156,16 @@ a {
 
 .logo {
   display: flex;
-  align-items: flex-end;
-  height: auto;
   margin-bottom: 2rem; }
   .logo:hover {
     text-decoration: none; }
 
 .logo__image {
-  height: 2.5rem;
-  margin-right: 0.5rem; }
+  width: 100%; }
 
+.logo__image img,
 .logo__image svg {
-  height: 100%;
+  width: 100%;
   fill: #ffffff; }
 
 .company-name {
