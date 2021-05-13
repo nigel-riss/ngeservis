@@ -1,8 +1,8 @@
 .logo {
   // box model
   display: flex;
-  // align-items: flex-end;
-  // height: auto;
+  align-items: flex-end;
+  height: auto;
   margin-bottom: 2rem;
 
   &:hover {
@@ -13,15 +13,15 @@
 
 .logo__image {
   // box model
-  width: 100%;
-  // height: 2.5rem;
-  // margin-right: 0.5rem;
+  // width: 100%;
+  height: 2.5rem;
+  margin-right: 0.5rem;
 }
 
 .logo__image img,
 .logo__image svg {
   // box model
-  width: 100%;
+  height: 100%;
 
   // visual
   fill: $white;
