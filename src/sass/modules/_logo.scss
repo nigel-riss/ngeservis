@@ -4,6 +4,11 @@
   align-items: flex-end;
   height: auto;
   margin-bottom: 2rem;
+
+  &:hover {
+    // typography
+    text-decoration: none;
+  }
 }
 
 .logo__image {
