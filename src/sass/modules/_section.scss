@@ -4,24 +4,15 @@
 }
 
 .section--map {
-
   // box model
-  & iframe {
-    display: none;
-
-    @media(min-width: $tablet) {
-      display: block;
-      padding-bottom: 0;
-      margin-bottom: 2rem;
-    }
-  }
+  margin: 0 -1.5rem;
 }
 
 .section__caption {
   // box model
   display: inline-block;
-  padding: 0.5rem 2rem;
-  margin: 0;
+  padding: 0.5rem 0.75rem;
+  margin-left: -0.75rem;
   margin-bottom: 1.5rem;
 
   // typography
@@ -102,7 +93,8 @@
   // box model
   display: block;
   width: 100%;
-  margin: 20px 0;
+  margin: 1rem 0;
+  border: 2px solid fuchsia;
 
   // visual
   border: 1px solid $orange;

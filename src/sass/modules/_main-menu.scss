@@ -1,13 +1,13 @@
 .main-menu {
   // box model
-  padding: 2rem 1rem;
+  padding: 2rem 0.75rem;
 
   // typography
   text-align: right;
 
   // background-color: $headerBgColor;
   background-image: linear-gradient(to bottom, rgba($headerBgColor, 0.75), transparent);
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(2px);
 }
 
 .main-menu__list {
@@ -22,6 +22,9 @@
 }
 
 .main-menu__item {
+  // box model
+  margin-bottom: 0.125rem;
+
   &--active .main-menu__link {
     // typography
     color: $dark;
@@ -46,11 +49,11 @@
 
   // box model
   display: block;
-  padding: 10px 15px;
+  padding: 0.5rem 0.75rem;
 
   // typography
   color: $white;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.8rem;
   letter-spacing: 0.05em;
   text-decoration: none;

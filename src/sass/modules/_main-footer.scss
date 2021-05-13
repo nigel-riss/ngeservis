@@ -3,7 +3,7 @@
   position: relative;
 
   // box model
-  padding: 3rem 1rem;
+  padding: 3rem 1.5rem;
   padding-bottom: 4rem;
 
   // typography
@@ -13,20 +13,25 @@
   background-color: $orange;
   background-image: url("img/footer-bg.png");
 
-  // &:before {
-  //   content: "";
+  &:before {
+    content: "";
 
-  //   // positioning
-  //   position: absolute;
-  //   top: -8px;
+    // positioning
+    position: absolute;
+    right: 1rem;
+    top: -5.5rem;
+    z-index: 3;
 
-  //   // box model
-  //   display: block;
-  //   height: 9px;
-  //   width: 100%;
+    // box model
+    display: block;
+    height: 7rem;
+    width: 100%;
 
-  //   // visual
-  //   /*border: 1px solid red;*/
-  //   background-image: url("img/footer-border.png");
-  // }
+    // visual
+    /*border: 1px solid red;*/
+    background-image: url("./img/activities.png");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
