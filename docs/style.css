@@ -161,11 +161,14 @@ a {
   display: flex;
   align-items: flex-end;
   height: auto;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  color: #ffffff;
+  text-decoration: none; }
   @media (min-width: 600px) {
     .logo {
       margin-bottom: 0; } }
   .logo:hover {
+    color: #f7ce3e;
     text-decoration: none; }
 
 .logo__image {
@@ -178,9 +181,10 @@ a {
   fill: #ffffff; }
 
 .company-name {
-  color: #ffffff;
+  color: inherit;
   font-size: 1rem;
-  line-height: 1; }
+  line-height: 1;
+  transition: all 0.25s ease-out; }
   @media (min-width: 600px) {
     .company-name {
       font-size: 1.25rem; } }

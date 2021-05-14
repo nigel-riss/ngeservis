@@ -1,39 +1,56 @@
-header.hero
-  .hero__top
-    a.logo(href='index.html')
-      .logo__image
-        img(src='./img/logo.svg' alt='лого') 
-      h1.company-name НефтеГазЭнергоСервис
-    .contacts
-      a(href='tel:+74991265327') +7 (499) 126-53-27
-      a(href='mailto:info@ngeservice.com') info@ngeservice.com
-    .hero__menu-button
-      button#menu-button.menu-button(href="#" role="button") ≡
-        img(src="./img/menu.svg", alt="")
+-
+  var menu = [
+    {
+      name: `index`,
+      title: `Главная`,
+    },
+    {
+      name: `experience`,
+      title: `Опыт компании`,
+    },
+    {
+      name: `qualification`,
+      title: `Квалификация компании`,
+    },
+    {
+      name: `schemes`,
+      title: `Разработка схем \nтеплоснабжения городов РФ`,
+    },
+    {
+      name: `activities`,
+      title: `Текущие проекты`,
+    },
+    {
+      name: `partners`,
+      title: `Наши партнёры`,
+    },
+    {
+      name: `contacts`,
+      title: `Контакты`,
+    },
+  ]
 
-  .hero__nav
-    nav.main-menu
-      ul.main-menu__list
-        li.main-menu__item.main-menu__item--active
-          a.main-menu__link(href='index.html') Главная
-        li.main-menu__item
-          a.main-menu__link(href='experience.html') Опыт Компании
-        li.main-menu__item
-          a.main-menu__link(href='qualification.html') Квалификация Компании
-        li.main-menu__item
-          a.main-menu__link(href='offers.html') Разработка схем <br>теплоснабжения городов РФ
-        li.main-menu__item
-          a.main-menu__link(href='activities.html') Текущие проекты
-        li.main-menu__item
-          a.main-menu__link(href='partners.html') Наши партнёры
-        li.main-menu__item
-          a.main-menu__link(href='contacts.html') Контакты
+mixin hero(active)
+  header.hero
+    .hero__top
+      a.logo(href='index.html')
+        .logo__image
+          img(src='./img/logo.svg' alt='лого') 
+        h1.company-name НефтеГазЭнергоСервис
+      .contacts
+        a(href='tel:+74991265327') +7 (499) 126-53-27
+        a(href='mailto:info@ngeservice.com') info@ngeservice.com
+      .hero__menu-button
+        button#menu-button.menu-button(href="#" role="button") ≡
+          img(src="./img/menu.svg", alt="")
 
-  //- .hero__activities
-    ul.activities
-      li.activities__item Разработка схем теплоснабжения, газораспределения, водоснабжения и водоотведения
-      li.activities__item Разработка комплексных программных документов для муниципальных образований, промышленных и сетевых компаний
-      li.activities__item Разработка предпроектных и проектных решений в области теплоснабжения, энергосбережения, топливоснабжения и повышения энергетической
-        | эффективности
-      li.activities__item Энергетические обследования с разработкой предложений по энергосервисному обслуживанию и повышению энергетической эффективности
-      li.activities__item Диагностика и обследование энергетического оборудования, определение электромагнитной совместимости на промышленных и сетевых объектах
+    .hero__nav
+      nav.main-menu
+        ul.main-menu__list
+          each menuItem in menu
+            if active === menuItem.name
+              li.main-menu__item.main-menu__item--active
+                a.main-menu__link(href=`${menuItem.name}.html`)= menuItem.title
+            else
+              li.main-menu__item
+                a.main-menu__link(href=`${menuItem.name}.html`)= menuItem.title

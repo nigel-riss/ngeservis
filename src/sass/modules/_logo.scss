@@ -5,13 +5,18 @@
   height: auto;
   margin-bottom: 2rem;
 
+  // typography
+  color: $white;
+  text-decoration: none;
+  
   @include atTablet {
     // box model
     margin-bottom: 0;
   }
-
+  
   &:hover {
     // typography
+    color: $orange;
     text-decoration: none;
   }
 }
