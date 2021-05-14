@@ -3,8 +3,10 @@
   padding: 2rem 1.5rem;
   padding-bottom: 5rem;
 
-  @media(min-width: $tablet) {
-    padding-top: 20px;
+  @include atTablet {
+    // box model
+    padding: 2rem;
+    padding-bottom: 6rem;
   }
 
   @media(min-width: $desktop) {

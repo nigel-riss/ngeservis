@@ -5,6 +5,11 @@
   height: auto;
   margin-bottom: 2rem;
 
+  @include atTablet {
+    // box model
+    margin-bottom: 0;
+  }
+
   &:hover {
     // typography
     text-decoration: none;

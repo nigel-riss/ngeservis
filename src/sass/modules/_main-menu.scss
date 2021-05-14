@@ -1,14 +1,21 @@
 .main-menu {
   // box model
   padding: 2rem 0.75rem;
-  // padding-right: 1.5rem;
 
-  // typography
-  // text-align: right;
-
-  // background-color: $headerBgColor;
-  background-image: linear-gradient(to bottom, rgba($headerBgColor, 0.75), transparent);
+  background-image:
+    linear-gradient(to bottom, rgba($headerBgColor, 0.75), transparent);
   backdrop-filter: blur(2px);
+
+  @include atTablet {
+    // box model
+    padding: 2rem 1rem;
+
+    // typography
+    text-align: right;
+
+    // visual
+    backdrop-filter: blur(1px);
+  }
 }
 
 .main-menu__list {
@@ -34,27 +41,15 @@
     background-color: $orange;
     background-image: url("img/footer-bg.png");
 
+    @include atTablet {
+      // box model
+      margin-bottom: 0.25rem;
+      margin-right: 1rem;
+    }
+
     &:hover:before {
       display: none;
     }
-
-    // &::after {
-    //   content: '';
-
-    //   // positioning
-    //   position: absolute;
-    //   top: 0;
-    //   left: calc(-0.75rem - 2px);
-
-    //   // box model
-    //   display: block;
-    //   height: 100%;
-    //   width: 0.75rem;
-
-    //   // visual
-    //   background-color: $orange;
-    //   background-image: url("img/footer-bg.png");
-    // }
   }
 
   & a:hover {
@@ -70,7 +65,6 @@
   // box model
   display: block;
   padding: 0.5rem 1.5rem;
-  // margin-left: calc(0.75rem + 1px);
 
   // typography
   color: $white;
@@ -79,6 +73,12 @@
   letter-spacing: 0.05em;
   text-decoration: none;
   text-transform: uppercase;
+
+  @include atTablet {
+    // box model
+    display: inline-block;
+    padding: 0.5rem 1rem;
+  }
 
   &:before {
     content: "";
@@ -96,6 +96,12 @@
     background-color: $orange;
     opacity: 0;
     transition: all 0.325s ease-in-out;
+
+    @include atTablet {
+      // positioning
+      left: auto;
+      right: -1rem;
+    }
   }
 
   &:hover:before {
