@@ -1,11 +1,17 @@
 .footer-menu {
   // box model
   margin-bottom: 3rem;
+
+  @include atTablet {
+    // box model
+    margin-bottom: 0;
+    margin-right: 2rem;
+  }
 }
 
 .footer-menu__link {
   // box model
-  display: block;
+  display: inline-block;
   padding: 0.25rem 0;
   margin-bottom: 0.25rem;
 

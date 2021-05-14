@@ -3,15 +3,15 @@
   color: $dark;
   font-size: 0.85rem;
 
-  @media(min-width: $tablet) {
-    float: left;
-    padding-top: 30px;
-    padding-bottom: 30px;
+  @include atTablet {
+    // box model
+    margin-bottom: 0.5rem;
   }
 
   a {
     // typography
     color: $dark;
     font-weight: 600;
+    white-space: nowrap;
   }
 }

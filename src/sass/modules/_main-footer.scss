@@ -13,6 +13,14 @@
   background-color: $orange;
   background-image: url("img/footer-bg.png");
 
+  @include atTablet {
+    // box model
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 3rem 2rem;
+  }
+
   &:before {
     content: "";
 
@@ -33,5 +41,14 @@
     background-position: bottom right;
     background-repeat: no-repeat;
     background-size: contain;
+    pointer-events: none;
+
+    @include atTablet {
+      // positioning
+      top: -4.5rem;
+
+      // box model
+      height: 10rem;
+    }
   }
 }
