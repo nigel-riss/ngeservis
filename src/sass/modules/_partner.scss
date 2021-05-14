@@ -1,0 +1,25 @@
+.partner {
+  // box model
+  flex: auto;
+  height: 5rem;
+  margin: 0.25rem;
+  padding: 0.5rem;
+
+  // typography
+  text-align: center;
+
+  // border
+  border-radius: 0.5rem;
+
+  // visual
+  background-color: $white;
+}
+
+.partner img {
+  // box model
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+}

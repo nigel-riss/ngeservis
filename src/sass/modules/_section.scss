@@ -123,13 +123,25 @@
   display: block;
   width: 100%;
   margin: 1rem 0;
-  border: 2px solid fuchsia;
 
   // visual
   border: 1px solid $orange;
+
+  img {
+    // box model
+    width: 100%;
+  }
 
   &--no-border {
     // visual
     border: none;
   }
+}
+
+.section__partners {
+  // box model
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  // justify-content: space-around;
 }
