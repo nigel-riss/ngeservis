@@ -47,6 +47,9 @@
   background-image: url("img/footer-bg.png");
 
   @include atDesktopS {
+    // box model
+    display: inline-block;
+
     // typography
     font-size: 1.25rem;
   }
@@ -146,6 +149,31 @@
 
 .section__testimonials {
   // box model
-  // display: flex;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 
+  a {
+    // box model
+    display: block;
+    flex-basis: calc(50% - 0.5rem);
+    margin-bottom: 0.5rem;
+
+    @include atTablet {
+      // box model
+      flex-basis: calc(25% - 0.5rem);
+    }
+
+    @include atDesktopS {
+      // box model
+      flex-basis: calc(20% - 1rem);
+      margin-bottom: 1rem;
+    }
+  }
+
+  a img {
+    // box model
+    height: 100%;
+    width: 100%;
+  }
 }

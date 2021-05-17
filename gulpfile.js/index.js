@@ -1,11 +1,12 @@
 'use strict';
 
-const server      = require('browser-sync').create();
-const gulp        = require('gulp');
+const path        = require(`path`);
+const gulp        = require(`gulp`);
 const pug         = require(`gulp-pug`);
 const embedSVG    = require(`gulp-embed-svg`);
-const sass        = require('gulp-sass');
-
+const sass        = require(`gulp-sass`);
+const webpack     = require(`webpack-stream`);
+const server      = require(`browser-sync`).create();
 
 // Paths
 const dirs = {
@@ -13,12 +14,36 @@ const dirs = {
   svg:            `./src/img/**/*.svg`,
   scss:           './src/sass/style.scss',
   scssWatch:      './src/sass/**/*.scss',
-  js:             './src/js/**/*.js',
+  js:             './src/js/*.js',
   php:            './src/*.php',
   wp:             '/mnt/e/xampp/htdocs/ngeservice/wp-content/themes/nge',
 
   dist:         `./docs`,
 };
+
+
+// Webpack Config
+const webpackConfig = {
+  entry: {
+    scripts: `./src/js/scripts.js`,
+  },
+  output: {
+    filename: `[name].js`,
+    path: path.resolve(__dirname, `docs`),
+  },
+  mode: `development`,
+  module: {
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: `babel-loader`,
+      },
+    ],
+  },
+  devtool: `source-map`,
+};
+
 
 /**
  * Starts browser sync server
@@ -72,24 +97,24 @@ const compileStyles = (cb) => {
   gulp.src(dirs.scss)
     .pipe(sass().on(`error`, sass.logError))
     .pipe(gulp.dest(dirs.dist))
-    .pipe(server.stream())
-    .pipe(gulp.dest(dirs.wp));
+    .pipe(server.stream());
+    // .pipe(gulp.dest(dirs.wp));
 
     cb();
 };
 
 
-/**
- * Compiles js code
- * @param {function} done callback
- */
-const compileScripts = (done) => {
+// Compile js code
+const compileScripts = (cb) => {
   gulp.src(dirs.js)
-    .pipe(gulp.dest(dirs.wp));
+    .pipe(webpack(webpackConfig))
+    .on(`error`, (error) => {
+      console.log("\x1b[31m", error.message, "\x1b[0m");
+    })
+    .pipe(gulp.dest(dirs.dist));
 
-  done();
+  cb();
 };
-
 
 const copyPHP = (cb) => {
   gulp.src(dirs.php)
@@ -106,6 +131,8 @@ const watch = () => {
   startServer();
   gulp.watch(dirs.pugMain, renderPug);
   gulp.watch(dirs.scssWatch, compileStyles);
+  gulp.watch(dirs.js, compileScripts);
+
   // gulp.watch(dirs.js, gulp.series(compileScripts, reloadServer));
   // gulp.watch(dirs.php, gulp.series(copyPHP));
 };
