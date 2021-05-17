@@ -1,27 +1,13 @@
 .hero {
   // positioning
   position: relative;
+
   // visual
   background-image: url("img/bg-desktop copy.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   // background-position: bottom center;
   background-size: cover;
-
-  @media(min-width: $desktop) {
-    height: 700px;
-  }
-
-  &--page {
-
-    // box model
-    @media(min-width: $tablet) {
-      height: 130px;
-    }
-
-    // visual
-    background-position: center bottom;
-  }
 }
 
 .hero__top {
@@ -42,8 +28,8 @@
   }
 
   @include atDesktopS {
-    // visual
-    background-color: rgba($headerBgColor, 0.75);
+    // box model
+    padding: 2rem 3rem;
   }
 }
 

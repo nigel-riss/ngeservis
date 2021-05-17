@@ -9,7 +9,10 @@
     padding-bottom: 6rem;
   }
 
-  @media(min-width: $desktop) {
-    padding-top: 40px;
+  @include atDesktopS {
+    // box model
+    padding: 2rem 3rem;
+    padding-bottom: 6rem;
+    max-width: 42rem;
   }
 }

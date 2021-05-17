@@ -16,6 +16,11 @@
     // visual
     backdrop-filter: blur(1px);
   }
+
+  @include atDesktopS {
+    // box model
+    padding: 2rem;
+  }
 }
 
 .main-menu__list {

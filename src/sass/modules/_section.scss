@@ -1,6 +1,10 @@
 .section {
   // box model
   margin-bottom: 2rem;
+
+  @include atDesktopS {
+    // padding-left: 3rem;
+  }
 }
 
 .section--map {
@@ -48,19 +52,6 @@
     // visual
     background-color: $dark;
   }
-
-  @media(min-width: $desktop) {
-    // display: inline-block;
-    max-width: 500px;
-  }
-
-  @media(min-width: $tablet) {
-    font-size: 25px;
-  }
-
-  @media(min-width: $desktop) {
-    font-size: 30px;
-  }
 }
 
 .section__sub-caption {
@@ -70,11 +61,6 @@
   // typography
   color: $orange;
   font-size: 0.85rem;
-
-  // box model
-  @media(min-width: $desktop) {
-    width: 600px;
-  }
 }
 
 .section__text {
@@ -89,11 +75,6 @@
     // typography
     color: $orange;
   }
-
-  // box model
-  @media(min-width: $desktop) {
-    width: 600px;
-  }
 }
 
 .section__item {
@@ -105,10 +86,6 @@
   font-size: 0.85rem;
   font-weight: 300;
   line-height: 1.5;
-
-  @media(min-width: $desktop) {
-    width: 600px;
-  }
 
   &:before {
     content: "— ";
@@ -126,6 +103,11 @@
 
   // visual
   border: 1px solid $orange;
+
+  @include atDesktopS {
+    // box model
+    // margin-left: -3rem;
+  }
 
   img {
     // box model

@@ -4,9 +4,6 @@
   font-size: 1rem;
   line-height: 1;
 
-  // visual
-  transition: all 0.25s ease-out;
-
   @include atTablet {
     // typography
     font-size: 1.25rem;

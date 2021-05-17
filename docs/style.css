@@ -111,14 +111,6 @@ a {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
-  @media (min-width: 1000px) {
-    .hero {
-      height: 700px; } }
-  .hero--page {
-    background-position: center bottom; }
-    @media (min-width: 768px) {
-      .hero--page {
-        height: 130px; } }
 
 .hero__top {
   padding: 1rem;
@@ -133,7 +125,7 @@ a {
       padding: 2rem; } }
   @media (min-width: 1000px) {
     .hero__top {
-      background-color: rgba(20, 31, 37, 0.75); } }
+      padding: 2rem 3rem; } }
 
 .hero__activities {
   padding: 1rem; }
@@ -183,8 +175,7 @@ a {
 .company-name {
   color: inherit;
   font-size: 1rem;
-  line-height: 1;
-  transition: all 0.25s ease-out; }
+  line-height: 1; }
   @media (min-width: 600px) {
     .company-name {
       font-size: 1.25rem; } }
@@ -210,6 +201,9 @@ a {
       padding: 2rem 1rem;
       text-align: right;
       backdrop-filter: blur(1px); } }
+  @media (min-width: 1000px) {
+    .main-menu {
+      padding: 2rem; } }
 
 .main-menu__list {
   display: flex;
@@ -275,7 +269,9 @@ a {
       padding-bottom: 6rem; } }
   @media (min-width: 1000px) {
     .main {
-      padding-top: 40px; } }
+      padding: 2rem 3rem;
+      padding-bottom: 6rem;
+      max-width: 42rem; } }
 
 .section {
   margin-bottom: 2rem; }
@@ -307,23 +303,11 @@ a {
     height: 100%;
     width: 2px;
     background-color: #1a2930; }
-  @media (min-width: 1000px) {
-    .section__caption {
-      max-width: 500px; } }
-  @media (min-width: 768px) {
-    .section__caption {
-      font-size: 25px; } }
-  @media (min-width: 1000px) {
-    .section__caption {
-      font-size: 30px; } }
 
 .section__sub-caption {
   margin-bottom: 1rem;
   color: #f7ce3e;
   font-size: 0.85rem; }
-  @media (min-width: 1000px) {
-    .section__sub-caption {
-      width: 600px; } }
 
 .section__text {
   margin-bottom: 1rem;
@@ -331,9 +315,6 @@ a {
   font-size: 0.85rem; }
   .section__text strong {
     color: #f7ce3e; }
-  @media (min-width: 1000px) {
-    .section__text {
-      width: 600px; } }
 
 .section__item {
   padding-bottom: 1rem;
@@ -341,9 +322,6 @@ a {
   font-size: 0.85rem;
   font-weight: 300;
   line-height: 1.5; }
-  @media (min-width: 1000px) {
-    .section__item {
-      width: 600px; } }
   .section__item:before {
     content: "— ";
     color: #f7ce3e; }
