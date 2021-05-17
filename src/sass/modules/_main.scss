@@ -11,8 +11,14 @@
 
   @include atDesktopS {
     // box model
+    margin: 0 auto;
     padding: 2rem 3rem;
     padding-bottom: 6rem;
-    max-width: 42rem;
+  }
+  
+  @include atDesktopM {
+    // box model
+    padding: 4rem $dPadding;
+    padding-bottom: 8rem;
   }
 }

@@ -3,13 +3,23 @@
   margin-bottom: 2rem;
 
   @include atDesktopS {
-    // padding-left: 3rem;
+    // box model
+    max-width: 48rem;
+    padding-right: 6rem;
   }
 }
 
 .section--map {
   // box model
   margin: 0 -1.5rem;
+  max-width: inherit;
+  padding-right: 0;
+}
+
+.section--partners {
+  // box model
+  max-width: inherit;
+  padding-right: 0;
 }
 
 .section__caption {
@@ -35,6 +45,11 @@
   // visual
   background-color: $orange;
   background-image: url("img/footer-bg.png");
+
+  @include atDesktopS {
+    // typography
+    font-size: 1.25rem;
+  }
 
   &::after {
     content: '';
@@ -106,7 +121,8 @@
 
   @include atDesktopS {
     // box model
-    // margin-left: -3rem;
+    margin: 2rem;
+    margin-left: 14rem;
   }
 
   img {

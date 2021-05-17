@@ -21,6 +21,11 @@
     padding: 3rem 2rem;
   }
 
+  @include atDesktopS {
+    // box model
+    padding: 3rem;
+  }
+
   &:before {
     content: "";
 
@@ -45,10 +50,15 @@
 
     @include atTablet {
       // positioning
-      top: -4.5rem;
+      top: -7rem;
 
       // box model
       height: 10rem;
+    }
+
+    @include atDesktopS {
+      // positioning
+      right: 2rem;
     }
   }
 }
