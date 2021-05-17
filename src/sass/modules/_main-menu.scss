@@ -20,6 +20,7 @@
   @include atDesktopS {
     // box model
     padding: 2rem;
+    backdrop-filter: none;
   }
 }
 
