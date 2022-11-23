@@ -7,7 +7,7 @@
     "@babel/core": "^7.14.2",
     "@babel/preset-env": "^7.14.2",
     "babel-loader": "^8.2.2",
-    "browser-sync": "^2.26.14",
+    "browser-sync": "^2.27.10",
     "gulp": "^4.0.2",
     "gulp-embed-svg": "^1.4.0",
     "gulp-pug": "^4.0.1",
